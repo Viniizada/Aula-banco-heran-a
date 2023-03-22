@@ -13,6 +13,15 @@ public class Principal {
                 ContaCorrente cc1 = new ContaCorrente(numero, (int) saldo,limite);
                 JOptionPane.showInputDialog(null,"Saldo" + cc1.getSaldo()+"\nSaldo com o Limite: " + cc1.ConsultaSaldoTotal(),"Conta Corrente",JOptionPane.INFORMATION_MESSAGE);
             break;
+            
+                numero = Integer.parseInt(JOptionPane.showInputDialog("Número da conta"));
+                saldo = Double.parseDouble(JOptionPane.showInputDialog("Saldo"));
+                limite = Double.parseDouble(JOptionPane.showInputDialog("Limite"));
+                ContaPoupanca cp1 = new ContaPoupanca(numero, (int) saldo,rendimento);
+                cp1.atualizarendimento();
+                
+                JOptionPane.showMessageDialog(null,"Saldo" + cp1.getSaldo()"Conta Poupança: ",JOptionPane.INFORMATION_MESSAGE);
+
 
             case 2:
                 break;
