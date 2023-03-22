@@ -1,0 +1,28 @@
+import javax.swing.JOptionPane;
+public class Principal {
+    public static void main (String [] args){
+        int numero;
+        double saldo, limite, rendimento;
+
+        int opcao = Integer.parseInt(JOptionPane.showInputDialog("Banco:\n<1>ContaCorrente\n<2>Conta Poupança<3>Sair\n"));
+        switch (opcao){
+            case 1:
+                numero = Integer.parseInt(JOptionPane.showInputDialog("Número da conta"));
+                saldo = Double.parseDouble(JOptionPane.showInputDialog("Saldo"));
+                limite = Double.parseDouble(JOptionPane.showInputDialog("Limite"));
+                ContaCorrente cc1 = new ContaCorrente(numero,saldo,limite);
+                JOptionPane.showInputDialog(null,"Saldo" + cc1.getSaldo()+"\nSaldo com o Limite: " + cc1.ConsultaSaldoTotal(),"Conta Corrente",JOptionPane.INFORMATION_MESSAGE);
+            break;
+            
+            case 2:
+                break;
+            case 3:
+                break;
+            default:
+
+                JOptionPane.showInputDialog(null,"Escolha Invalida","Erro",JOptionPane.ERROR);
+
+        }
+
+    }
+}
