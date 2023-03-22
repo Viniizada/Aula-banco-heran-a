@@ -10,10 +10,10 @@ public class Principal {
                 numero = Integer.parseInt(JOptionPane.showInputDialog("Número da conta"));
                 saldo = Double.parseDouble(JOptionPane.showInputDialog("Saldo"));
                 limite = Double.parseDouble(JOptionPane.showInputDialog("Limite"));
-                ContaCorrente cc1 = new ContaCorrente(numero,saldo,limite);
+                ContaCorrente cc1 = new ContaCorrente(numero, (int) saldo,limite);
                 JOptionPane.showInputDialog(null,"Saldo" + cc1.getSaldo()+"\nSaldo com o Limite: " + cc1.ConsultaSaldoTotal(),"Conta Corrente",JOptionPane.INFORMATION_MESSAGE);
             break;
-            
+
             case 2:
                 break;
             case 3:
